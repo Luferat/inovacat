@@ -141,6 +141,41 @@
             letter-spacing: .25rem;
         }
 
+        /* Menu principal */
+
+        #wrap>nav {
+            background-color: orange;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+        }
+
+        #wrap>nav a {
+            text-decoration: none;
+            color: #222;
+            padding: 1rem;
+            transition: .2s;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: .45rem;
+        }
+
+
+        #wrap>nav a i {
+            font-size: 2rem;
+        }
+
+        #wrap>nav a:hover {
+            background-color: #222;
+            color: orange;
+        }
+
+        #wrap>nav a:first-child {
+            margin-right: auto;
+        }
+
+
         /* Media Queries - Telas maiores 768px */
 
         @media screen and (min-width: 768px) {
@@ -163,34 +198,15 @@
                 justify-content: space-between;
             }
 
-        }
+            #wrap>nav a {
+                flex-direction: row;
+                gap: .25rem;
+            }
 
-        /* Menu principal */
+            #wrap>nav a i {
+                font-size: 1.25rem;
+            }
 
-        #wrap>nav {
-            background-color: orange;
-            display: flex;
-            align-items: center;
-            justify-content: end;
-        }
-
-        #wrap>nav a {
-            text-decoration: none;
-            color: #222;
-            padding: 1rem;
-            transition: .2s;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        #wrap>nav a:hover {
-            background-color: #222;
-            color: orange;
-        }
-
-        #wrap>nav a:first-child {
-            margin-right: auto;
         }
     </style>
 </head>
@@ -226,6 +242,7 @@
             <a href="#Lista"><i class="fa-solid fa-clipboard-list fa-fw"></i><span>Lista</span></a>
             <a href="#Contato"><i class="fa-solid fa-comments fa-fw"></i><span>Contato</span></a>
             <a href="#Sobre"><i class="fa-solid fa-circle-info fa-fw"></i><span>Sobre</span></a>
+            <!-- <a href="#Login"><i class="fa-solid fa-right-to-bracket fa-fw"></i><span>Login</span></a> -->
         </nav>
 
         <main>
@@ -245,7 +262,11 @@
 
         </main>
 
-        <footer>Rodapé</footer>
+        <footer>
+            <a href="#Início"><i class="fa-solid fa-house fa-fw"></i></a>
+            <div>&copy; 2026 Joca da Silva</div>
+            <a href="#top"><i class="fa-solid fa-circle-up fa-fw"></i></a>
+        </footer>
 
     </div>
 
