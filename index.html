@@ -7,10 +7,15 @@
     <!-- Pode importar o CSS do Font Awesome assim: 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     -->
+    <link rel="shortcut icon" href="img/favicon.png">
     <title>InovaCat</title>
     <style>
-        /* Importa o CSS do font Awesome */
+        /* Importa o CSS do font Awesome usando CSS @import */
         @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css');
+
+        /***************/
+        /* Reset geral */
+        /***************/
 
         * {
             box-sizing: border-box;
@@ -26,9 +31,24 @@
             font-size: 16px;
         }
 
+        /* Links padrão */
+
+        a {
+            text-decoration: none;
+            color: steelblue;
+        }
+
+        a:hover {
+            color: orangered;
+        }
+
+        /* Fundo da página */
+
         body {
             background-color: blueviolet;
         }
+
+        /* Elemento principal abaixo do body */
 
         #wrap {
             background-color: pink;
@@ -38,7 +58,11 @@
             gap: .5rem;
         }
 
+        /**********************/
+        /* Conteúdo principal */
+        /**********************/
 
+        /* Elemento pai - flex */
 
         #wrap>main {
             background-color: orange;
@@ -49,23 +73,28 @@
             flex-grow: 1;
         }
 
+        /* Flexbox com conteúdo principal */
+
         #wrap>main>article {
             background-color: green;
             padding: 1rem;
             flex-grow: 1;
         }
 
+        /* Flexbox com conteúdo complementar opcional */
+
         #wrap>main>aside {
             background-color: blue;
             padding: 1rem;
         }
 
+        /* Rodapé */
+
         #wrap>footer {
             background-color: red;
         }
 
-
-
+        /* Cabeçalho da página */
 
         #wrap>header {
             background-color: #333;
@@ -73,11 +102,15 @@
             flex-direction: column;
         }
 
+        /* Formata um ícone como logotipo */
+
         .header-logo {
             display: flex;
             align-items: center;
             gap: .5rem;
         }
+
+        /* Formulário de pesquisa */
 
         .header-search {
             display: flex;
@@ -161,7 +194,6 @@
             gap: .45rem;
         }
 
-
         #wrap>nav a i {
             font-size: 2rem;
         }
@@ -175,28 +207,36 @@
             margin-right: auto;
         }
 
-
-        /* Media Queries - Telas maiores 768px */
+        /* Media Queries - Telas >= 768px */
 
         @media screen and (min-width: 768px) {
+
+            /* Reposiciona os conteúdos */
+
             #wrap>main {
                 flex-direction: row;
             }
 
             #wrap>main>aside {
-                /* flex: 0 0 220px; */
+
+                /* flex: 0 0 220px; → o mesmo que abaixo! */
+
                 flex-shrink: 0;
                 flex-basis: 220px;
             }
         }
 
-        /* Media Queries - Telas maiores 575px */
+        /* Media Queries - Telas >= 575px */
         @media screen and (min-width: 575px) {
+
+            /* Reposiciona o formulário de pesquisa */
 
             #wrap>header {
                 flex-direction: row;
                 justify-content: space-between;
             }
+
+            /* reposiciona o menu principal */
 
             #wrap>nav a {
                 flex-direction: row;
